@@ -135,7 +135,7 @@ def __stripPath__(path):
 
 # "{ArtistName}/{Flag} [{AlbumID}] [{AlbumYear}] {AlbumTitle}"
 def __getAlbumPath__(conf: Settings, album):
-    base = conf.downloadPath
+    base = conf.downloadPath + "/"
     artist = aigpy.path.replaceLimitChar(album.artists[0].name, '-')
     # album folder pre: [ME][ID]
     flag = API.getFlag(album, Type.Album, True, "")
